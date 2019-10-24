@@ -10,6 +10,7 @@ Created on Fri Oct 11 18:26:53 2019
 import math
 import numpy as np
 import pandas as pd
+import sys
 def readdata(data):
     
 	# 把有些數字後面的奇怪符號刪除
