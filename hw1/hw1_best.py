@@ -140,10 +140,10 @@ def convert2testset(file_name):
 
     
     
-year1_pd = pd.read_csv(r'C:\Users\kevin\Downloads\ml2019fall-hw1\year1-data.csv')
+year1_pd = pd.read_csv('year1-data.csv')
 year1 = readdata(year1_pd)
 train_data1 = extract(year1)
-year2_pd = pd.read_csv(r'C:\Users\kevin\Downloads\ml2019fall-hw1\year2-data.csv')
+year2_pd = pd.read_csv('year2-data.csv')
 year2 = readdata(year2_pd)
 train_data2 = extract(year2)
 train_data = np.hstack((train_data1,train_data2))
@@ -159,11 +159,11 @@ model.summary()
 train_history=model.fit(train_x, train_y,validation_split=0.25,epochs=100 , batch_size=50,shuffle = True, initial_epoch=0, verbose=1)
     
 scores=model.evaluate(train_x,train_y)  
-x_test = convert2testset(r'C:\Users\kevin\Downloads\ml2019fall-hw1\testing_data.csv')
+x_test = convert2testset('testing_data.csv')
 result = model.predict(x_test)
     
 fout = open('result.csv', 'w')
-test = pd.read_csv(r'C:\Users\kevin\Downloads\ml2019fall-hw1\testing_data.csv')
+test = pd.read_csv('testing_data.csv')
 id_name = []                  
 for name in test['id']:
     if (name not in id_name):
