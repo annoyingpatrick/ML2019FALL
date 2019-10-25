@@ -162,7 +162,7 @@ def minibatch(x, y):
 
     return w, bias
 
-year1_pd = pd.read_csv(r'C:\Users\kevin\Downloads\ml2019fall-hw1\year1-data.csv')
+year1_pd = pd.read_csv('year1-data.csv')
 
 year1 = readdata(year1_pd)
 train_data = extract(year1)
@@ -170,7 +170,7 @@ x_train, y_train = parse2train(train_data)
 w, bias = minibatch(x_train, y_train)
 
 
-year2_pd = pd.read_csv(r'C:\Users\kevin\Downloads\ml2019fall-hw1\year2-data.csv')
+year2_pd = pd.read_csv('year2-data.csv')
 
 year2 = readdata(year1_pd)
 val_data = extract(year1)
@@ -183,7 +183,7 @@ print("val_mse = %f" %val_mse)
 
 #result output
 fout = open('result.csv', 'w')
-test = pd.read_csv(r'C:\Users\kevin\Downloads\ml2019fall-hw1\testing_data.csv')
+test = pd.read_csv('testing_data.csv')
 test_ = readdata(test)
 test_data = extract(test_)
 testset = build_testset(test_data)
