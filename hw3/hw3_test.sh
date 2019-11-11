@@ -1,2 +1,2 @@
 #!/bin/bash 
-python hw3_test.py $1 $2
+python hw3_best.py $1 $2
